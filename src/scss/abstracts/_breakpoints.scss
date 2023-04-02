@@ -1,0 +1,83 @@
+// nav
+$breakpoint-nav: (
+  "shrink": 1100px,
+  "hide": 945px,
+  "tablet": 660px,
+  "phone": 480px,
+);
+
+// logo
+$breakpoint-logo: (
+  "tablet": 660px,
+  "tablet-2": 552px,
+  "phone": 480px,
+  // todo - weird
+);
+
+// landing
+$breakpoint-landing: (
+  "lg": 1045px,
+  "span": 648px,
+  "3-lines": 552px,
+  "jump": 480px,
+  "jump-2": 279px,
+  // todo - broken
+);
+
+// home-ph image
+
+$breakpoint-home-image: (
+  "crop-1": 400px,
+  "crop-2": 540px,
+  "crop-3": 750px,
+);
+
+// introduction
+$breakpoint-intro: (
+  "screen-full": 845px,
+  "tablet": 768px,
+  "phone": 420px,
+);
+
+// tabs
+$breakpoint-tabs: (
+  "images": 1250px,
+  "tablet": 768px,
+  "no-gutter": 850px,
+  "bigger-images": 540px,
+  "phone": 480px,
+  "phone-sm": 369px,
+  "phone-x-sm": 333px,
+  "composer-quote": 1157px,
+);
+
+// recordings
+$breakpoint-recordings: (
+  "flex-max": 1000px,
+  "2-per-line": 914px,
+);
+
+// tracks
+$breakpoint-tracks: (
+  "change-layout": 768px,
+  "phone": 600px,
+);
+
+// gallery
+$breakpoint-gallery: (
+  "sm-phone": 382px,
+);
+
+// contact-pg
+$breakpoint-contact: (
+  "reflow": 750px,
+  "phone": 480px,
+);
+
+/*
+320px — 480px: Mobile devices
+481px — 768px: iPads, Tablets
+769px — 1024px: Small screens, laptops
+1025px — 1200px: Desktops, large screens
+1201px and more —  Extra large screens, TV
+*/

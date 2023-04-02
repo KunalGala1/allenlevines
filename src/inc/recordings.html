@@ -1,0 +1,160 @@
+<main>
+  <section role="content">
+    <div class="card">
+      <a href="music/an-ella-fitzgerald-tribute.html">
+        <picture>
+          <source srcset="img/ella-tribute.webp" />
+          <img src="img/ella-tribute.jpg" alt="" />
+        </picture>
+      </a>
+      <h3>
+        <strong>
+          <span>An Ella Fitzgerald Tribute</span>
+          <br />
+          <span>Songs of Duke Ellington</span>
+        </strong>
+      </h3>
+    </div>
+    <div class="card">
+      <a href="music/images-five-haiku.html">
+        <picture>
+          <source srcset="img/five-haiku.webp" />
+          <img src="img/five-haiku.jpg" alt="" />
+        </picture>
+      </a>
+      <h3>
+        <strong>Images: Five Haiku</strong>
+        <br />
+        for mezzo-soprano and piano
+      </h3>
+    </div>
+    <div class="card">
+      <a href="music/after-the-quake.html">
+        <picture>
+          <source srcset="img/crossing-the-americas.webp" />
+          <img src="img/crossing-the-americas.jpg" alt="" />
+        </picture>
+      </a>
+      <h3>
+        <strong
+          ><span>
+            <span>
+              after the quake
+              <i class="temp-icon">&mdash;&nbsp;</i>
+            </span>
+            <span>
+              <span class="japanese">地震のあとで</span>
+              <i class="temp-icon">&mdash;&nbsp;</i>
+            </span>
+            <span>jishin no ato de</span>
+          </span></strong
+        >
+        <br />
+        for mandolin and guitar
+      </h3>
+    </div>
+    <div class="card">
+      <a href="music/travel-journal.html">
+        <picture>
+          <source srcset="img/travel-journal.webp" />
+          <img src="img/travel-journal.jpg" alt="" />
+        </picture>
+      </a>
+      <h3>
+        <strong>Travel Journal: Books I-III</strong>
+        <br />
+        String Quartet No. 2
+      </h3>
+    </div>
+    <div class="card">
+      <a href="music/daybreak-on-lake-bosomtwe.html">
+        <picture>
+          <source srcset="img/daybreak-on-lake-bosomtwe.webp" />
+          <img src="img/daybreak-on-lake-bosomtwe.jpg" alt="" />
+        </picture>
+      </a>
+      <h3>
+        <strong>Daybreak on Lake Bosomtwe</strong>
+        <br />
+        for plectrum orchestra and percussion
+      </h3>
+    </div>
+    <div class="card">
+      <a href="music/three-northern-nocturnes.html">
+        <picture>
+          <source srcset="img/three-northern-nocturnes.webp" />
+          <img src="img/three-northern-nocturnes.jpg" alt="" />
+        </picture>
+      </a>
+      <h3>
+        <strong>
+          <span>
+            Drei nördliche Nocturnes
+            <i class="temp-icon">|&nbsp;</i>
+          </span>
+          <span>
+            Three Northern Nocturnes
+            <i class="temp-icon">-&nbsp;</i>
+          </span>
+          <span>Homage to Brahms</span>
+        </strong>
+        <br />
+        for mandolin and guitar
+      </h3>
+    </div>
+    <!-- <div class="card">
+      <a href="music/great-waltz-of-china.html">
+        <picture>
+          <source srcset="img/great-waltz-of-china.webp" />
+          <img src="img/great-waltz-of-china.jpg" alt="" />
+        </picture>
+      </a>
+      <h3>
+        <strong>Great Waltz of China</strong>
+        <br />
+        for spoken chorus and mixed chamber ensemble
+      </h3>
+    </div> -->
+    <div class="card">
+      <a href="music/red-moon-rising.html">
+        <picture>
+          <source srcset="img/red-moon-rising.webp" />
+          <img src="img/red-moon-rising.jpg" alt="" />
+        </picture>
+      </a>
+      <h3>
+        <strong>Red Moon Rising</strong>
+        <br />
+        for Chinese winds, percussion, two guitars, & string quartet
+      </h3>
+    </div>
+    <div class="card">
+      <a href="music/idylls.html">
+        <picture>
+          <source srcset="img/idylls.webp" />
+          <img src="img/idylls.jpg" alt="" />
+        </picture>
+      </a>
+      <h3>
+        <strong>Idylls</strong>
+        <br />
+        for mixed chorus and percussion
+      </h3>
+    </div>
+  </section>
+</main>
+
+<script>
+  const cards = Array.from(
+    document.querySelectorAll("#music-pg main section[role='content'] .card")
+  );
+  cards.forEach(element => {
+    element.classList.add("fade");
+  });
+  for (let index = 0; index < cards.length; index++) {
+    const element = cards[index];
+    setTimeout(() => {
+      element.classList.add("fade-active");
+    }, index * 50 + 450);
+  }
+</script>

@@ -1,0 +1,36 @@
+@use "../abstracts/" as a;
+
+#introduction {
+  font-family: a.$main-sans-font;
+  max-width: 800px;
+  padding: 32px 0;
+  @media (max-width: map-get(a.$breakpoint-landing, "lg")) {
+    padding-top: 16px;
+  }
+  @media (min-width: map-get(a.$breakpoint-intro, "screen-full")) {
+    margin: 0 auto;
+  }
+  @media (max-width: map-get(a.$breakpoint-intro, "screen-full")) {
+    margin: 0 16px;
+  }
+  .text-content {
+    p {
+      font-size: 18px;
+      line-height: 2em;
+      font-weight: 200;
+      height: max-content;
+      & + p {
+        margin-top: 40px;
+      }
+    }
+  }
+  .container {
+    display: flex;
+    justify-content: center;
+  }
+  a {
+    margin-right: 2rem;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+  }
+}

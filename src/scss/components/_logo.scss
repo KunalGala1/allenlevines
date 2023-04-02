@@ -1,0 +1,43 @@
+@use "../abstracts/" as a;
+
+.logo {
+  display: flex;
+  align-items: center;
+  height: 100%; // dependancy for img height
+  img {
+    height: 100%;
+  }
+  h1 {
+    white-space: nowrap;
+    margin-left: 15px;
+    @media (max-width: map-get(a.$breakpoint-logo, "phone")) {
+      margin-left: 7px;
+    }
+    font-size: clamp(8px, 50px, 8vw);
+    // todo - doesn't work on Safari
+    .small-caps {
+      font-size: clamp(6px, 35px, 6vw);
+    }
+    font-family: a.$main-sans-font;
+    font-weight: 400;
+    position: relative;
+    &::after {
+      content: "Composer. Pianist. Teaching Artist. Conductor.";
+      font-family: a.$main-sans-font;
+      font-size: clamp(
+        4px,
+        17px,
+        2.75vw
+      ); // todo - look more into clamp and find best values
+      // todo - doesn't work on Safari
+      position: absolute;
+      left: 0;
+      bottom: -4px;
+      text-transform: capitalize;
+    }
+  }
+  // ===focus state===
+  &:focus {
+    outline: solid 1px var(--color-primary-darker);
+  }
+}

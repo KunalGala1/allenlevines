@@ -1,0 +1,47 @@
+@use "../abstracts/" as a;
+
+#contact-pg main section[role="content"] {
+  form {
+    margin: 0 auto;
+    font-family: a.$main-sans-font;
+    .item + .item {
+      margin-top: 8px;
+    }
+    h2 {
+      font-size: 18px;
+      color: rgb(100, 100, 100);
+      font-weight: 600;
+      margin-bottom: 12px; // + margin-top from .item = 16px
+    }
+    input,
+    textarea {
+      background-color: rgb(240, 240, 240);
+      width: 100%;
+      padding: 8px;
+      font-size: 18px;
+    }
+    label {
+      display: block;
+      color: rgb(6, 6, 6);
+      font-weight: 300;
+      margin-left: 4px;
+    }
+    // <span>
+    .error {
+      background-color: var(--color-error);
+      color: white;
+      padding: 4px 8px;
+      font-size: 12px;
+      display: none;
+      &.active {
+        display: inline-block;
+      }
+    }
+    .container {
+      display: flex;
+      width: 100%;
+      justify-content: center;
+      margin-top: 16px !important; // override .item margin-top
+    }
+  }
+}

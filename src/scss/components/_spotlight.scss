@@ -1,0 +1,65 @@
+// <body>
+.frozen {
+  overflow: hidden; // prevent scrolling on body
+}
+
+#spotlight.active {
+  display: flex;
+}
+
+#spotlight {
+  display: none;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+  justify-content: space-between;
+  align-items: center;
+  // (specific styling of btns below)
+  button {
+    &:hover {
+      transition: background-color, 0.3s ease;
+    }
+  }
+  i {
+    color: white;
+    font-size: 18px;
+  }
+  img {
+    max-width: calc(100% - (40px * 2) - (32px * 4));
+    max-height: 90%;
+    width: auto;
+    height: auto;
+  }
+}
+
+// <button>
+.angle-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+  margin: 32px;
+  background-color: rgba(0, 0, 0, 0.7);
+  &:hover {
+    background-color: var(--color-secondary-dark);
+  }
+  // (+ general styling of btns above)
+}
+
+// <button>
+.close-btn {
+  position: absolute;
+  top: 0;
+  left: 0;
+  margin: 8px 16px;
+  padding: 8px 12px;
+  background-color: transparent;
+  &:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+  }
+  // (+ general styling of btns above)
+}

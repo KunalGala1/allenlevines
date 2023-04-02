@@ -1,0 +1,36 @@
+:root {
+  // primary
+  --color-primary-lighter: rgb(191, 255, 182);
+  --color-primary-lighter-rgb: 191, 255, 182;
+  --color-primary-light: rgb(96, 250, 83);
+  --color-primary-light-rgb: 96, 250, 83;
+  --color-primary: rgb(0, 198, 24);
+  --color-primary-rgb: 0, 198, 24;
+  --color-primary-dark: rgb(0, 148, 0);
+  --color-primary-dark-rgb: 0, 148, 0;
+  --color-primary-darker: rgb(0, 85, 0);
+  --color-primary-darker-rgb: 0, 85, 0;
+
+  // secondary
+  --color-secondary-light: rgb(199, 255, 255);
+  --color-secondary-light-rgb: 199, 255, 255;
+  --color-secondary: rgb(147, 231, 249);
+  --color-secondary-rgb: 147, 231, 249;
+  --color-secondary-dark: rgb(96, 181, 198);
+  --color-secondary-dark-rgb: 96, 181, 198;
+
+  // gray
+  --color-gray-light: rgb(192, 192, 192);
+  --color-gray: rgb(128, 128, 128);
+  --color-gray-rgb: 128, 128, 128;
+
+  // white
+  --color-white-rgb: 256, 256, 256;
+
+  // link
+  --color-link: var(--color-primary-dark);
+
+  // function
+  --color-error: rgb(160, 0, 0);
+  --color-success: var(--color-secondary);
+}

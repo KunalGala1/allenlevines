@@ -1,0 +1,256 @@
+@use "../abstracts/" as a;
+
+$track-spacing: 42px;
+$track-max-width: 1200px;
+
+.track-pg main {
+  font-family: a.$main-sans-font;
+  min-height: calc(100vh - 110px - 26px);
+  @media (max-width: map-get(a.$breakpoint-nav, "tablet")) {
+    min-height: calc(100vh - 100px - 26px);
+  }
+  @media (max-width: map-get(a.$breakpoint-nav, "phone")) {
+    min-height: calc(100vh - 80px - 26px);
+  }
+}
+
+// content
+.track-pg main section[role="content"] {
+  // font-size
+  p,
+  li,
+  h4 {
+    font-size: 17px;
+  }
+  // hide on large layout
+  .layout-lg {
+    display: block;
+
+    @media (max-width: map-get(a.$breakpoint-tracks, "change-layout")) {
+      display: none;
+    }
+  }
+  // hide on small layout
+  .layout-sm {
+    display: none;
+
+    @media (max-width: map-get(a.$breakpoint-tracks, "change-layout")) {
+      display: block;
+    }
+  }
+  h1 span,
+  h3 span {
+    display: inline-block;
+    &.icon-hidden {
+      margin-right: 40px;
+    }
+  }
+  h1 {
+    font-weight: 300;
+    strong {
+      font-weight: 700;
+    }
+  }
+  h3 {
+    font-weight: 500;
+    font-size: 1.2em;
+  }
+  display: flex;
+  @media (max-width: map-get(a.$breakpoint-tracks, "change-layout")) {
+    flex-direction: column;
+  }
+  max-width: $track-max-width;
+  margin: 0 auto;
+  padding: 24px $track-spacing $track-spacing;
+  @media (max-width: map-get(a.$breakpoint-tracks, "phone")) {
+    padding: 24px;
+  }
+  @include a.main-link; // green underline for link
+}
+
+.track-pg main section[role="content"] .left {
+  max-width: 350px;
+  margin-right: 42px;
+
+  @media (max-width: map-get(a.$breakpoint-tracks, "change-layout")) {
+    max-width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    align-items: flex-start;
+    margin-right: 0;
+    margin-bottom: 32px;
+  }
+  @media (max-width: map-get(a.$breakpoint-tracks, "phone")) {
+    flex-wrap: nowrap;
+    flex-direction: column;
+    align-items: center;
+  }
+  picture {
+    margin-bottom: calc($track-spacing / 2);
+
+    &[role="placeholder"] {
+      padding: 30%;
+    }
+    @media (max-width: map-get(a.$breakpoint-tracks, "change-layout")) {
+      width: 25%;
+      &[role="placeholder"] {
+        padding: 7%;
+      }
+    }
+    @media (max-width: map-get(a.$breakpoint-tracks, "phone")) {
+      width: 100%;
+      &[role="placeholder"] {
+        padding: 30%;
+      }
+    }
+  }
+  .album-cover {
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 4px 8px;
+  }
+  .heading {
+    width: 75%;
+    padding-left: 16px;
+    @media (max-width: map-get(a.$breakpoint-tracks, "phone")) {
+      width: 100%;
+      padding-left: 0;
+      // padding-bottom: 16px;
+    }
+  }
+  h3 {
+    font-weight: 400;
+    margin-bottom: calc($track-spacing / 2);
+    font-size: 1em;
+  }
+  .text.wide {
+    width: calc(100vw - (46px * 2));
+    @media (max-width: map-get(a.$breakpoint-tracks, "phone")) {
+      width: 100%;
+    }
+    max-width: 1086px;
+  }
+  .text .item + .item {
+    margin-top: calc($track-spacing/2);
+  }
+  blockquote {
+    font-size: 16px;
+  }
+  span.quote {
+    font-style: normal;
+    display: block;
+    text-align: right;
+  }
+}
+
+.track-pg main section[role="content"] .right {
+  flex-grow: 1;
+  h1 {
+    font-weight: 400;
+  }
+  h3 {
+    font-weight: 400;
+    margin-bottom: calc($track-spacing / 2);
+    font-size: 1em;
+  }
+  h4 {
+    margin: 16px 0;
+  }
+  li {
+    white-space: nowrap;
+    padding: 16px;
+    padding-bottom: 16px;
+    border-bottom: solid 1px rgba(100, 100, 100, 0.3);
+    font-family: a.$secondary-serif-font;
+    line-height: 26px;
+    cursor: pointer;
+    position: relative;
+    // cancel on child elements
+    p,
+    q,
+    span {
+      white-space: normal;
+    }
+    p {
+      color: rgb(100, 100, 100);
+      margin-right: 16px;
+    }
+
+    .play-btn {
+      display: none;
+      position: absolute;
+      left: 16px;
+      top: 20px;
+    }
+    &:hover {
+      .play-btn {
+        display: inline-block;
+      }
+    }
+
+    .volume-btn {
+      display: none;
+      position: absolute;
+      left: 16px;
+      top: 20px;
+      &.active {
+        display: inline-block;
+      }
+    }
+    &:hover {
+      .volume-btn.active {
+        display: none;
+      }
+    }
+
+    span {
+      display: inline-block;
+      vertical-align: top;
+    }
+    span[role="marker"] {
+      // margin-right: 8px;
+      position: absolute;
+      left: 16px;
+      top: 16px;
+      &.hide {
+        display: none;
+      }
+    }
+    &:hover {
+      span[role="marker"] {
+        display: none;
+        &.override {
+          display: initial !important;
+        }
+      }
+    }
+
+    .track-title {
+      margin-left: 32px;
+    }
+
+    .frag {
+      margin-right: 8px;
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+    & + li {
+      margin-top: calc($track-spacing / 2);
+    }
+
+    // hover
+    // cursor: pointer;
+    transition: background-color 0.3s ease;
+    &:hover,
+    &:focus {
+      background-color: rgba($color: lightblue, $alpha: 0.2);
+    }
+    &.active {
+      background-color: rgba($color: lightblue, $alpha: 0.2);
+    }
+  }
+  .bottom {
+    margin-top: 32px;
+    text-align: right;
+  }
+}

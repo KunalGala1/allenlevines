@@ -1,0 +1,46 @@
+<div>
+  <span id="js-remove">
+    Please enable
+    <code>javascript</code>
+    .
+  </span>
+
+  <script>
+    document.getElementById("js-remove").remove();
+  </script>
+
+  <form action="contact-form.php" method="post" id="contact-form">
+    <h2 class="item">Contact Form:</h2>
+    <label class="item" for="name">*Name:</label>
+    <input class="item" id="name" name="name" type="text" />
+    <span class="error item">Name is required</span>
+    <label class="item" for="email">*Email:</label>
+    <input class="item" id="email" name="email" type="text" />
+    <span class="error item">Email is required</span>
+    <label class="item" for="subject">*Subject:</label>
+    <input class="item" id="subject" name="subject" type="text" />
+    <span class="error item">Subject is required</span>
+    <label class="item" for="message">Message:</label>
+    <textarea class="item" name="message" id="" cols="30" rows="10"></textarea>
+    <label class="item" for="human-verification">*1+2=?</label>
+    <input
+      class="item"
+      id="human-verification"
+      name="human-verification"
+      type="text"
+    />
+    <span class="error item">Answer is required</span>
+    <span class="error item">Incorrect answer</span>
+  </form>
+
+  <script>
+    const container = document.createElement("div");
+    container.classList.add("container", "item");
+    const submitBtn = document.createElement("button");
+    submitBtn.setAttribute("type", "submit");
+    submitBtn.innerHTML = "Send Message";
+    submitBtn.classList.add("btn-primary");
+    container.appendChild(submitBtn);
+    document.getElementById("contact-form").appendChild(container);
+  </script>
+</div>

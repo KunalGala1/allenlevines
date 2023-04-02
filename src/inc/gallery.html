@@ -1,0 +1,48 @@
+<main>
+  <section role="content">
+    <div class="card"><img src="img/gallery-1.jpg" alt="" /></div>
+    <div class="card"><img src="img/gallery-2.jpg" alt="" /></div>
+    <div class="card"><img src="img/gallery-3.jpg" alt="" /></div>
+    <div class="card"><img src="img/gallery-4.jpg" alt="" /></div>
+    <div class="card"><img src="img/gallery-5.jpg" alt="" /></div>
+    <!-- <div class="card"><img src="img/gallery-6.jpg" alt="" /></div> -->
+    <div class="card"><img src="img/gallery-7.jpg" alt="" /></div>
+    <!-- <div class="card"><img src="img/gallery-8.jpg" alt="" /></div> -->
+    <div class="card"><img src="img/gallery-9.jpg" alt="" /></div>
+    <div class="card"><img src="img/gallery-10.jpg" alt="" /></div>
+    <div class="card"><img src="img/gallery-11.jpg" alt="" /></div>
+    <div class="card"><img src="img/gallery-12.jpg" alt="" /></div>
+  </section>
+  <section id="spotlight">
+    <button class="close-btn">
+      <i class="fa-solid fa-arrow-left"></i>
+    </button>
+    <button class="angle-btn"><i class="fa-solid fa-angle-left"></i></button>
+    <img src="img/gallery-1.jpg" alt="" />
+    <button class="angle-btn"><i class="fa-solid fa-angle-right"></i></button>
+  </section>
+</main>
+<section id="credits-gallery"
+  ><span class=""
+    ><a href="https://www.louisebichan.co.uk/" target="_blank"
+      >Photos by Louise Bichan</a
+    ></span
+  ></section
+>
+
+<script>
+  const photoCards = Array.from(
+    document.querySelectorAll("#photos-pg main section[role='content'] .card")
+  );
+  photoCards.forEach(element => {
+    element.classList.add("fade");
+  });
+  document.body.onload = () => {
+    for (let index = 0; index < photoCards.length; index++) {
+      const element = photoCards[index];
+      setTimeout(() => {
+        element.classList.add("fade-active");
+      }, index * 50);
+    }
+  };
+</script>

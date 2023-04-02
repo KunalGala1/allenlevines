@@ -1,0 +1,15 @@
+@use "../abstracts/" as a;
+
+.credits {
+  position: absolute;
+  bottom: 2px;
+  right: 3px;
+  font-family: a.$serif-fancy;
+  font-size: 10px;
+  line-height: 10px;
+  color: rgba(255, 255, 255, 0.7);
+  a {
+    color: inherit !important;
+    text-decoration: none !important;
+  }
+}

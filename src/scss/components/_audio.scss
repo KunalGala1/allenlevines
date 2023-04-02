@@ -1,0 +1,24 @@
+@use "../abstracts/" as a;
+
+.audio {
+  position: absolute;
+  z-index: -5;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  font-family: a.$main-sans-font;
+  // <span>
+  .time-stamp {
+    font-size: 14px;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    display: none;
+  }
+
+  audio {
+    display: none;
+    margin: 15px 0;
+  }
+}

@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>
+      Allen LeVines | An Ella Fitzgerald Tribute ~ Songs of Duke Ellington
+    </title>
+    @@include("../inc/head.html")
+    <script src="../js/track-pg.js" defer></script>
+    <script src="../js/audio.js" defer></script>
+  </head>
+  <body class="track-pg">
+    <section class="header">@@include("../inc/nav.html")</section>
+    <script>
+      const currentLink = document.getElementsByClassName("navlink").item(2);
+      currentLink.classList.add("active");
+    </script>
+    <main>
+      <section role="content">
+        <div class="left">
+          <picture>
+            <source srcset="../img/ella-tribute.webp" />
+            <img class="album-cover" src="../img/ella-tribute.jpg" alt="" />
+          </picture>
+          <div class="heading layout-sm">
+            <h1>
+              <strong>
+                <span>
+                  An Ella Fitzgerald Tribute
+                  <i class="temp-icon">~&nbsp;</i>
+                </span>
+                <span>Songs of Duke Ellington</span>
+              </strong>
+            </h1>
+            <h3>
+              <span>
+                Marina Khankhalaeva, mezzo-soprano
+                <i class="temp-icon">•&nbsp;</i>
+              </span>
+              <span>Allen LeVines, piano</span>
+            </h3>
+          </div>
+
+          <div class="music-streaming">
+            <ul role="list">
+              <li>
+                <a
+                  href="https://music.apple.com/us/album/songs-of-duke-ellington-a-tribute-to-ella-fitzgerald/1640403636"
+                  target="_blank"
+                >
+                  <span class="logo"
+                    ><img src="../img/apple-music.svg" alt=""
+                  /></span>
+                  <span class="text">Apple Music</span>
+                  <span class="target"
+                    ><i class="fa-solid fa-arrow-up-right-from-square"></i
+                  ></span>
+                </a>
+              </li>
+              <li>
+                <a
+                  href="https://www.youtube.com/watch?v=9MVpz_IWphk&list=OLAK5uy_mwNV84U_5l0gmaRc6z4cvIcQvohMHTlx8"
+                  target="_blank"
+                >
+                  <span class="logo"
+                    ><img src="../img/youtube.svg" alt=""
+                  /></span>
+                  <span class="text">Youtube</span>
+                  <span class="target"
+                    ><i class="fa-solid fa-arrow-up-right-from-square"></i
+                  ></span>
+                </a>
+              </li>
+              <li>
+                <a
+                  href="https://open.spotify.com/album/6PZgYr8Cujx9n5UQgUkrkl?si=7vmlA6DlTT-yKoCy12R6mw"
+                  target="_blank"
+                >
+                  <span class="logo"
+                    ><img src="../img/spotify.svg" alt=""
+                  /></span>
+                  <span class="text">Spotify</span>
+                  <span class="target"
+                    ><i class="fa-solid fa-arrow-up-right-from-square"></i
+                  ></span>
+                </a>
+              </li>
+            </ul>
+          </div>
+
+          <div class="text">
+            <p class="item">
+              On a wintry afternoon, vocalist Marina Khankhalaeva and pianist
+              Allen LeVines met to read through a few classic songs by Duke
+              Ellington. Before summer it was clear that a concert needed to
+              happen. A seasoned singer encompassing all classical genres with
+              an international career, Khankhalaeva&rsquo;s jazz instincts and
+              delivery reveal a voice with remarkable range, dropping to
+              chocolaty low tones and floating effortlessly up to twinkling
+              crystal highs. Her intense study of Ella Fitzgerald&rsquo;s vocal
+              artistry is evident in her sublime and dreamy interpretations of
+              every song. LeVines&rsquo; early career included work with an
+              array of musicians in Philadelphia and New York jazz clubs and
+              venues. Duke Ellington and Bill Evans are among important
+              influences in his piano styling.
+            </p>
+          </div>
+        </div>
+        <div class="right">
+          <div class="layout-lg">
+            <h1>
+              <strong>
+                <span>
+                  An Ella Fitzgerald Tribute
+                  <i class="temp-icon">~&nbsp;</i>
+                </span>
+                <span>Songs of Duke Ellington</span>
+              </strong>
+            </h1>
+            <h3>
+              <span>
+                Marina Khankhalaeva, mezzo-soprano
+                <i class="temp-icon">•&nbsp;</i>
+              </span>
+              <span>Allen LeVines, piano</span>
+            </h3>
+          </div>
+          <div class="track-listing">
+            <h4>Track Listing</h4>
+            <ol role="list">
+              <li>
+                <i class="fa-solid fa-play play-btn"></i>
+                <i class="fa-solid fa-volume-high volume-btn"></i>
+                <span role="marker">1.</span>
+                <span class="track-title">Azure - Ellington-Mills (1937)</span>
+                <div class="audio">
+                  <div class="time-stamp">
+                    <span class="current-time">00:00</span>
+                    /
+                    <span class="duration">00:00</span>
+                  </div>
+                  <audio src="../audio/azure.mp3" controls></audio>
+                </div>
+              </li>
+              <li>
+                <i class="fa-solid fa-play play-btn"></i>
+                <i class="fa-solid fa-volume-high volume-btn"></i>
+                <span role="marker">2.</span>
+                <span class="track-title"
+                  >All Too Soon - Ellington-Sigman (1940)</span
+                >
+                <div class="audio">
+                  <div class="time-stamp">
+                    <span class="current-time">00:00</span>
+                    /
+                    <span class="duration">00:00</span>
+                  </div>
+                  <audio src="../audio/all_too_soon.mp3" controls></audio>
+                </div>
+              </li>
+              <li>
+                <i class="fa-solid fa-play play-btn"></i>
+                <i class="fa-solid fa-volume-high volume-btn"></i>
+                <span role="marker">3.</span>
+                <span class="track-title">
+                  I&rsquo;m Beginning to See the Light -
+                  Ellington-George-Hodges-James (1944)
+                </span>
+                <div class="audio">
+                  <div class="time-stamp">
+                    <span class="current-time">00:00</span>
+                    /
+                    <span class="duration">00:00</span>
+                  </div>
+                  <audio
+                    src="../audio/im_beginning_to_see_the_light.mp3"
+                    controls
+                  ></audio>
+                </div>
+              </li>
+              <li>
+                <i class="fa-solid fa-play play-btn"></i>
+                <i class="fa-solid fa-volume-high volume-btn"></i>
+                <span role="marker">4.</span>
+                <span class="track-title"
+                  >Solitude - Ellington-DeLange-Mills (1934)</span
+                >
+                <div class="audio">
+                  <div class="time-stamp">
+                    <span class="current-time">00:00</span>
+                    /
+                    <span class="duration">00:00</span>
+                  </div>
+                  <audio src="../audio/solitude.mp3" controls></audio>
+                </div>
+              </li>
+              <li>
+                <i class="fa-solid fa-play play-btn"></i>
+                <i class="fa-solid fa-volume-high volume-btn"></i>
+                <span role="marker">5.</span>
+                <span class="track-title"
+                  >Mood Indigo - Ellington-Bigard-Mills (1930)</span
+                >
+                <div class="audio">
+                  <div class="time-stamp">
+                    <span class="current-time">00:00</span>
+                    /
+                    <span class="duration">00:00</span>
+                  </div>
+                  <audio src="../audio/mood_indigo.mp3" controls></audio>
+                </div>
+              </li>
+              <li>
+                <i class="fa-solid fa-play play-btn"></i>
+                <i class="fa-solid fa-volume-high volume-btn"></i>
+                <span role="marker">6.</span>
+                <span class="track-title"
+                  >In A Sentimental Mood - Ellington-Kurtz (1935)</span
+                >
+                <div class="audio">
+                  <div class="time-stamp">
+                    <span class="current-time">00:00</span>
+                    /
+                    <span class="duration">00:00</span>
+                  </div>
+                  <audio
+                    src="../audio/in_a_sentimental_mood.mp3"
+                    controls
+                  ></audio>
+                </div>
+              </li>
+              <li>
+                <i class="fa-solid fa-play play-btn"></i>
+                <i class="fa-solid fa-volume-high volume-btn"></i>
+                <span role="marker">7.</span>
+                <span class="track-title">
+                  Don&rsquo;t Get Around Much Anymore - Ellington-Russell (1942)
+                </span>
+                <div class="audio">
+                  <div class="time-stamp">
+                    <span class="current-time">00:00</span>
+                    /
+                    <span class="duration">00:00</span>
+                  </div>
+                  <audio
+                    src="../audio/dont_get_around_much_more.mp3"
+                    controls
+                  ></audio>
+                </div>
+              </li>
+              <li>
+                <i class="fa-solid fa-play play-btn"></i>
+                <i class="fa-solid fa-volume-high volume-btn"></i>
+                <span role="marker">8.</span>
+                <span class="track-title"
+                  >Come Sunday - Ellington, arr. LeVines (1942)</span
+                >
+                <div class="audio">
+                  <div class="time-stamp">
+                    <span class="current-time">00:00</span>
+                    /
+                    <span class="duration">00:00</span>
+                  </div>
+                  <audio src="../audio/come_sunday.mp3" controls></audio>
+                </div>
+              </li>
+              <li>
+                <i class="fa-solid fa-play play-btn"></i>
+                <i class="fa-solid fa-volume-high volume-btn"></i>
+                <span role="marker">9.</span>
+                <span class="track-title">
+                  Tańczące Eurydyki (Dancing Eurydices) - Gärtner-Rzemieniecka-
+                  Wojciechowski, arr: German (1964)
+                </span>
+                <div class="audio">
+                  <div class="time-stamp">
+                    <span class="current-time">00:00</span>
+                    /
+                    <span class="duration">00:00</span>
+                  </div>
+                  <audio src="../audio/dancing_eurydices.mp3" controls></audio>
+                </div>
+              </li>
+              <li>
+                <i class="fa-solid fa-play play-btn"></i>
+                <i class="fa-solid fa-volume-high volume-btn"></i>
+                <span role="marker">10.</span>
+                <span class="track-title">
+                  I Got It Bad And That Ain&rsquo;t Good - Ellington-Webster
+                  (1941)
+                </span>
+                <div class="audio">
+                  <div class="time-stamp">
+                    <span class="current-time">00:00</span>
+                    /
+                    <span class="duration">00:00</span>
+                  </div>
+                  <audio src="../audio/i_got_it_bad.mp3" controls></audio>
+                </div>
+              </li>
+              <li>
+                <i class="fa-solid fa-play play-btn"></i>
+                <i class="fa-solid fa-volume-high volume-btn"></i>
+                <span role="marker">11.</span>
+                <span class="track-title"
+                  >Just Squeeze Me - Ellington-Gaines (1941)</span
+                >
+                <div class="audio">
+                  <div class="time-stamp">
+                    <span class="current-time">00:00</span>
+                    /
+                    <span class="duration">00:00</span>
+                  </div>
+                  <audio src="../audio/just_squeeze_me.mp3" controls></audio>
+                </div>
+              </li>
+              <li>
+                <i class="fa-solid fa-play play-btn"></i>
+                <i class="fa-solid fa-volume-high volume-btn"></i>
+                <span role="marker">12.</span>
+                <span class="track-title">
+                  Do Nothing &rsquo;Till You Hear From Me - Ellington-Russell
+                  1940
+                </span>
+                <div class="audio">
+                  <div class="time-stamp">
+                    <span class="current-time">00:00</span>
+                    /
+                    <span class="duration">00:00</span>
+                  </div>
+                  <audio
+                    src="../audio/do_nothing_till_you_hear_from_me.mp3"
+                    controls
+                  ></audio>
+                </div>
+              </li>
+              <li>
+                <i class="fa-solid fa-play play-btn"></i>
+                <i class="fa-solid fa-volume-high volume-btn"></i>
+                <span role="marker">13.</span>
+                <span class="track-title">
+                  I Didn&rsquo;t Know About You - Ellington-Russell (1944)
+                </span>
+                <div class="audio">
+                  <div class="time-stamp">
+                    <span class="current-time">00:00</span>
+                    /
+                    <span class="duration">00:00</span>
+                  </div>
+                  <audio
+                    src="../audio/i_didnt_know_about_you.mp3"
+                    controls
+                  ></audio>
+                </div>
+              </li>
+              <li>
+                <i class="fa-solid fa-play play-btn"></i>
+                <i class="fa-solid fa-volume-high volume-btn"></i>
+                <span role="marker">14.</span>
+                <span class="track-title"
+                  >Sophisticated Lady - Ellington-Parish-Mills (1932)</span
+                >
+                <div class="audio">
+                  <div class="time-stamp">
+                    <span class="current-time">00:00</span>
+                    /
+                    <span class="duration">00:00</span>
+                  </div>
+                  <audio src="../audio/sophisticated_lady.mp3" controls></audio>
+                </div>
+              </li>
+              <li>
+                <i class="fa-solid fa-play play-btn"></i>
+                <i class="fa-solid fa-volume-high volume-btn"></i>
+                <span role="marker">15.</span>
+                <span class="track-title"
+                  >Satin Doll - Ellington-Strayhorn-Mercer (1953)</span
+                >
+                <div class="audio">
+                  <div class="time-stamp">
+                    <span class="current-time">00:00</span>
+                    /
+                    <span class="duration">00:00</span>
+                  </div>
+                  <audio src="../audio/satin_doll.mp3" controls></audio>
+                </div>
+              </li>
+              <li>
+                <i class="fa-solid fa-play play-btn"></i>
+                <i class="fa-solid fa-volume-high volume-btn"></i>
+                <span role="marker">16.</span>
+                <span class="track-title"
+                  >My Funny Valentine - Rodgers-Hart (1937)</span
+                >
+                <div class="audio">
+                  <div class="time-stamp">
+                    <span class="current-time">00:00</span>
+                    /
+                    <span class="duration">00:00</span>
+                  </div>
+                  <audio src="../audio/my_funny_valentine.mp3" controls></audio>
+                </div>
+              </li>
+            </ol>
+          </div>
+        </div>
+      </section>
+    </main>
+    @@include("../inc/footer.html")
+  </body>
+</html>

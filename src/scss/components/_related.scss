@@ -1,0 +1,39 @@
+@use "../abstracts/" as a;
+
+#related-links {
+  picture {
+    position: relative;
+    overflow: hidden;
+    margin-bottom: 32px;
+    width: 90%;
+    @media (max-width: map-get(a.$breakpoint-contact, "reflow")) {
+      margin-right: auto;
+      margin-left: auto;
+    }
+  }
+  img {
+    @media (min-width: map-get(a.$breakpoint-contact, "reflow")) {
+      margin-right: 32px;
+    }
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    transform: scale(1.25);
+  }
+  font-family: a.$main-sans-font;
+  @media (min-width: map-get(a.$breakpoint-contact, "reflow")) {
+    padding-right: 16px;
+  }
+  @media (max-width: map-get(a.$breakpoint-contact, "reflow")) {
+    margin-bottom: 16px;
+  }
+  h3 {
+    font-weight: 300;
+    span {
+      display: inline-block;
+    }
+    color: rgb(25, 25, 25);
+  }
+  li + li {
+    margin-top: 32px;
+  }
+  @include a.main-link; // green underline for link
+}

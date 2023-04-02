@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ALLEN LᴇVINES | Composer, Conductor, Pianist, Educator</title>
+    @@include("inc/head.html")
+  </head>
+  <body>
+    <section class="header">@@include("inc/nav.html")</section>
+    <script>
+      const currentLink = document.getElementsByClassName("navlink").item(0);
+      currentLink.classList.add("active");
+      currentLink.setAttribute("href", "#");
+    </script>
+    @@include("inc/home.html") @@include("inc/footer.html")
+  </body>
+</html>

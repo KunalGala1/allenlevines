@@ -1,0 +1,21 @@
+@use "../abstracts/" as a;
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  // dimensions
+  height: 110px; // used to calculate height of landing page
+  padding: 15px 3em;
+  // shadow
+  box-shadow: 0 2px 2px -2px rgba(0, 0, 0, 0.2);
+  @media (max-width: map-get(a.$breakpoint-nav, "hide")) {
+    justify-content: center;
+  }
+  @media (max-width: map-get(a.$breakpoint-logo, "tablet")) {
+    height: 100px; // used to calculate height of landing page
+  }
+  @media (max-width: map-get(a.$breakpoint-logo, "phone")) {
+    height: 80px; // used to calculate height of landing page
+  }
+}

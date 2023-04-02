@@ -1,0 +1,84 @@
+@use "../abstracts/" as a;
+
+#landing-page {
+  background-image: url("img/home-4.jpg");
+  @media (max-height: map-get(a.$breakpoint-home-image, "crop-3")) {
+    background-image: url("img/home-3.jpg");
+  }
+  @media (max-height: map-get(a.$breakpoint-home-image, "crop-2")) {
+    background-image: url("img/home-2.jpg");
+  }
+  @media (max-height: map-get(a.$breakpoint-home-image, "crop-1")) {
+    background-image: url("img/home-1.jpg");
+  }
+
+  min-height: calc(100vh - 110px); // - height of header
+  // @media (max-width: map-get(a.$breakpoint-logo, "tablet")) {
+  //   min-height: calc(100vh - 100px); // - height of header
+  // }
+  // @media (max-width: map-get(a.$breakpoint-logo, "phone")) {
+  //   min-height: calc(100vh - 80px); // - height of header
+  // }
+  @media (max-width: map-get(a.$breakpoint-landing, "lg")) {
+    min-height: calc(100vh - 223px);
+  }
+  @media (max-width: map-get(a.$breakpoint-logo, "tablet")) {
+    min-height: calc(100vh - 213px);
+  }
+  @media (max-width: map-get(a.$breakpoint-logo, "tablet-2")) {
+    min-height: calc(100vh - 243px);
+  }
+  @media (max-width: map-get(a.$breakpoint-logo, "phone")) {
+    min-height: calc(100vh - 400px);
+  }
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center 33%;
+
+  display: flex;
+  justify-content: center;
+  position: relative;
+
+  .wrapper {
+    width: 28%;
+    position: absolute;
+    right: 0;
+    bottom: 76px;
+  }
+
+  //   blockquote
+  blockquote {
+    //   includes styling from quote.scss
+    color: white;
+    // positioning
+    margin: 0 auto;
+    @media (min-width: map-get(a.$breakpoint-landing, "lg")) {
+      width: 260px;
+    }
+    @media (max-width: map-get(a.$breakpoint-landing, "lg")) {
+      display: none;
+      width: 100%;
+      background-color: rgba(100, 100, 100, 0.9);
+      padding: 8px;
+    }
+    &::after {
+      content: "\2014  Concertino Magazine, Fabian Hinsche";
+      font-size: 14px;
+    }
+  }
+}
+
+#landing-pg-sm-quote {
+  display: none;
+  padding: 16px;
+  color: rgb(0, 0, 0);
+  font-weight: 500;
+  background-color: rgb(240, 240, 240);
+  @media (max-width: map-get(a.$breakpoint-landing, "lg")) {
+    display: block;
+  }
+  &::after {
+    content: "\2014  Concertino Magazine, Fabian Hinsche";
+    font-size: 14px;
+  }
+}

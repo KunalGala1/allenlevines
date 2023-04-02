@@ -1,0 +1,15 @@
+// green underline for link
+@mixin main-link() {
+  a {
+    color: var(--color-link);
+    span {
+      text-decoration: underline;
+    }
+    &:hover,
+    &:focus {
+      span {
+        text-decoration: none;
+      }
+    }
+  }
+}

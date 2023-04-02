@@ -1,0 +1,24 @@
+@use "./abstracts/" as a;
+
+.japanese {
+  font-family: a.$main-japanese-font;
+}
+
+.star-symbol {
+  position: relative;
+  color: white;
+  margin-right: 7.5px;
+  &::before {
+    content: "";
+    width: 200%;
+    height: 100%;
+    position: absolute;
+    display: block;
+    top: 0;
+    left: 0;
+    background-image: url("img/star.svg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+}

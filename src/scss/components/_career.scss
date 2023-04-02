@@ -1,0 +1,29 @@
+@use "../abstracts/" as a;
+
+#career-section {
+  font-family: a.$main-sans-font;
+  text-align: center;
+  margin: 64px auto;
+  max-width: 700px;
+}
+
+#career-section .card {
+  font-size: 17px;
+  & + .card {
+    margin-top: 32px;
+  }
+  h3 {
+    font-weight: 600;
+    margin-bottom: 16px;
+  }
+  ul {
+    font-weight: 300;
+    padding: 0 16px;
+  }
+  li + li {
+    margin-top: 16px;
+  }
+  .frag {
+    display: inline-block;
+  }
+}

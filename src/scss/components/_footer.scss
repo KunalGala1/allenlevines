@@ -1,0 +1,10 @@
+@use "../abstracts/" as a;
+
+.footer {
+  background-color: rgba($color: #000000, $alpha: 0.75);
+  color: rgba($color: #fff, $alpha: 0.75);
+  font-family: a.$main-sans-font;
+  font-size: 12px;
+  text-align: center;
+  padding: 4px 0;
+}

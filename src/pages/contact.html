@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ALLEN LᴇVINES | Contact</title>
+    @@include("../inc/head.html")
+    <script src="js/contact-form.js" defer></script>
+  </head>
+  <body id="contact-pg">
+    <section role="alert">
+      <span>Message sent successfully!</span>
+      <button id="message-sent-btn"><i class="fa-solid fa-xmark"></i></button>
+    </section>
+
+    <script>
+      if (window.location.href.indexOf("?mailsent") != -1) {
+        document
+          .querySelector("#contact-pg section[role='alert']")
+          .classList.add("active");
+      }
+    </script>
+
+    <script>
+      // clear alert after clicking close button
+      document
+        .getElementById("message-sent-btn")
+        .addEventListener("click", ev => {
+          document
+            .querySelector("#contact-pg section[role='alert']")
+            .classList.remove("active");
+          let href = window.location.href;
+          href = href.substring(0, href.indexOf("?mailsent"));
+          window.history.replaceState("", "ALLEN LᴇVINES | Contact", href);
+        });
+    </script>
+
+    <section class="header">@@include("../inc/nav.html")</section>
+
+    <script>
+      const currentLink = document.getElementsByClassName("navlink").item(4);
+      currentLink.classList.add("active");
+      currentLink.setAttribute("href", "#");
+    </script>
+
+    <main>
+      <section role="content">
+        @@include("../inc/related.html") @@include("../inc/contact-form.html")
+      </section>
+    </main>
+
+    <script>
+      const contactContent = document.querySelector(
+        "#contact-pg main section[role='content']"
+      );
+      contactContent.classList.add("fade");
+      document.body.onload = () => {
+        contactContent.classList.add("fade-active");
+      };
+    </script>
+
+    @@include("../inc/footer.html")
+  </body>
+</html>

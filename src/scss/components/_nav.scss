@@ -1,0 +1,133 @@
+@use "../abstracts/" as a;
+
+nav {
+  font-family: a.$main-sans-font;
+  ul {
+    display: flex;
+  }
+  li {
+    transition: margin-left 0.5s ease;
+    & + li {
+      margin-left: 16px;
+      @media (max-width: map-get(a.$breakpoint-nav, "shrink")) {
+        margin-left: 4px;
+      }
+    }
+  }
+  // hide span (x mark) for normal nav
+  span {
+    display: none;
+  }
+}
+
+// <a>
+.navlink {
+  font-weight: 400;
+  padding: 5px;
+  display: block;
+}
+
+// ===burger-mode===
+@media (max-width: map-get(a.$breakpoint-nav, "hide")) {
+  nav {
+    position: fixed;
+    z-index: 20; // so it appears over page
+    background-color: rgba(var(--color-secondary-dark-rgb), 0.95);
+    top: 0;
+    $width-of-nav: 300px;
+    left: calc(-1 * $width-of-nav); // off screen by same amount as width
+    height: 100%;
+    width: $width-of-nav;
+    ul {
+      flex-direction: column;
+      align-items: center;
+      padding-top: 40px;
+    }
+    li + li {
+      margin-left: 0;
+      margin-top: 1.5em;
+    }
+    span {
+      display: block;
+      text-align: center;
+      padding: 40px;
+      i {
+        cursor: pointer;
+        padding: 15px;
+        font-size: 1.4em;
+        color: rgb(0, 0, 0, 0.75);
+
+        &:hover {
+          background-color: #{rgba(var(--color-gray-rgb), 0.2)};
+        }
+      }
+    }
+    // slide
+    transform: translateX(0);
+    transition: transform 0.5s ease;
+  }
+
+  // slide
+  nav.active {
+    transform: translateX(100%);
+  }
+
+  // hidden before fading in
+  .navlink {
+    opacity: 0;
+  }
+}
+
+// ===hover animation===
+
+$active-color: var(--color-primary-darker);
+
+@mixin active-underline {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 100%;
+  left: 0;
+  bottom: 0;
+  height: 2px;
+  background-color: $active-color;
+  opacity: 0.8;
+  transition: transform 0.3s ease;
+}
+
+// <a>
+.navlink {
+  position: relative;
+  &:hover,
+  &:focus {
+    color: $active-color;
+  }
+  &::after {
+    @include active-underline;
+    transform: scaleX(0);
+  }
+  &:hover::after,
+  &:focus::after {
+    transform: scaleX(0.85);
+  }
+}
+
+.navlink.active {
+  color: $active-color;
+  &::after {
+    @include active-underline;
+    transform: scaleX(0.85);
+  }
+}
+
+// nav link fade in animation
+@keyframes navLinkFade {
+  from {
+    opacity: 0;
+    transform: translateX(-50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0px);
+  }
+}

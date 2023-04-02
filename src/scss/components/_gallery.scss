@@ -1,0 +1,71 @@
+@use "../abstracts/" as a;
+
+#photos-pg main {
+  min-height: calc(100vh - 110px - 26px);
+  @media (max-width: map-get(a.$breakpoint-nav, "tablet")) {
+    min-height: calc(100vh - 100px - 26px);
+  }
+  @media (max-width: map-get(a.$breakpoint-nav, "phone")) {
+    min-height: calc(100vh - 80px - 26px);
+  }
+}
+
+#photos-pg main section[role="content"] {
+  display: grid;
+  padding: 16px;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  @media (max-width: map-get(a.$breakpoint-gallery,"sm-phone")) {
+    grid-template-columns: auto;
+  }
+  //   todo- bug: last row is different height...
+  grid-gap: 24px;
+  // <div>
+  .card {
+    overflow: hidden;
+    img {
+      box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+      //   https://getcssscan.com/css-box-shadow-examples
+      height: 100%;
+      width: 100%;
+      object-fit: cover;
+      object-position: center;
+      cursor: pointer;
+      transition: all 300ms ease;
+      &:hover,
+      &:focus {
+        // filter: grayscale(75%) blur(3px);
+        // transition: filter 0.25s ease;
+        // outline: solid 2px rgb(50, 50, 50);
+        transform: scale(1.05);
+      }
+    }
+    &.active {
+      position: absolute;
+      width: 90%;
+      padding: 16px;
+      background-color: rgba(0, 0, 0, 0.99);
+      top: calc((100% - 90%) / 2);
+      left: calc((100% - 90%) / 2);
+      img {
+        &:hover,
+        &:focus {
+          filter: none; // cancel normal filter
+        }
+      }
+    }
+  }
+}
+
+// <div>
+#credits-gallery {
+  text-align: center;
+  padding-bottom: 16px;
+  span {
+    color: rgb(100, 100, 100);
+    font-family: a.$serif-fancy;
+    font-size: 12px;
+    a {
+      color: inherit !important;
+    }
+  }
+}

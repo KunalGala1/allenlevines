@@ -1,0 +1,13 @@
+@use "../abstracts/" as a;
+
+blockquote {
+  font-family: a.$serif-fancy;
+  font-style: italic;
+  font-size: 17px;
+  line-height: 30px;
+  &::after {
+    display: block;
+    text-align: right;
+    font-style: normal;
+  }
+}
