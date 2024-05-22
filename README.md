@@ -1,4 +1,5 @@
-![logo](/dist/img/logo.jpg){width=50 height=50}
+<img src='/dist/img/logo.jpg' alt='logo' width=50>
+
 This is the website of [Allen LeVines](https://allenlevines.com/)
 
 #### Built with
